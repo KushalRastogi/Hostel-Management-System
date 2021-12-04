@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Deafault.master.cs" Inherits="Btech_Project_2021.Deafault" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Hostel Management</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-expand-sm  navbar-dark navbar-collapse   bg-success  p-3 m-0">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#"><img src="Images/logogrd.png" /></a>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="display_warden.aspx">Wardens</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Students</a>
+    </li>
+
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        GRD HOSTEL
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Boys Hostel 1</a>
+        <a class="dropdown-item" href="#">Boys Hostel 2</a>
+        <a class="dropdown-item" href="#">Girls Hostel</a>
+      </div>
+    </li>
+    <li class="nav-link dropdown ">
+      <a class="nav-link dropdown-toggle" href="#" id="settings" data-toggle="dropdown">
+            Settings
+      </a>            
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Rules</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="Login.aspx">Log Out</a>
+      </div>
+    </li>
+    <li style="float:right"><a href="#" class="nav-link" >Welcome <%=Session["a_name"].ToString() %></a></li>
+    
+  </ul>
+
+</nav>
+<br>
+     
+        
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        <hr />
+        <footer>
+            <p>&copy;<%:DateTime.Now.Year %>-Made by Kushal Rastogi</p>
+        </footer>
+        
+    </form>
+</body>
+</html>
